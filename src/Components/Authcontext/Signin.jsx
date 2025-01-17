@@ -1,12 +1,17 @@
 import Lottie from "lottie-react";
 import React, { useContext } from "react";
 import Loginanimeted from "../../assets/loti/login.json";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContxt from "./Authcontext";
 import { FcGoogle } from "react-icons/fc";
 
 const Signin = () => {
   const { Signinusers, Googlepupop } = useContext(AuthContxt);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const navigates = useNavigate();
+  console.log(location);
+  const form = location.state || "/";
   const Signinuser = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -18,6 +23,7 @@ const Signin = () => {
     Signinusers(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(form);
       })
       .catch((error) => console.log(error.message));
   };
@@ -26,6 +32,7 @@ const Signin = () => {
     Googlepupop()
       .then((result) => {
         console.log(result);
+        navigate(form);
       })
       .catch((error) => {
         console.log(error.message);

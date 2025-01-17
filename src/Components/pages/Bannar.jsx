@@ -5,8 +5,8 @@ import teamtwo from "../../../public/img/team2.jpg";
 
 const Bannar = () => {
   return (
-    <div className="hero bg-base-200 min-h-96">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+    <div className="hero bg-[url('/public/icon/bg-logo.svg')]  min-h-96">
+      <div className="hero-content w-[12000px] flex-col lg:flex-row-reverse">
         <div className="flex-1 mb-24 ml-32">
           <motion.img
             animate={{ y: [50, 100, 50] }}

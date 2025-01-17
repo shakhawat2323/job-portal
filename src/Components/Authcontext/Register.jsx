@@ -2,7 +2,7 @@ import Lottie from "lottie-react";
 import React, { useContext, useEffect } from "react";
 import Registeranimeted from "../../assets/loti/register.json";
 import AuthContxt from "./Authcontext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { FcGoogle } from "react-icons/fc";
 import { ImGithub } from "react-icons/im";
@@ -11,6 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Register = () => {
   const { Registeruser, UserLogOUt, Googlepupop } = useContext(AuthContxt);
+  const navigeate = useNavigate();
   const RegisterForm = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -25,6 +26,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         UserLogOUt();
+        navigeate("/signin");
       })
       .catch((err) => {
         console.log(err.message);
@@ -35,6 +37,7 @@ const Register = () => {
     Googlepupop()
       .then((result) => {
         console.log(result);
+        navigeate("/");
       })
       .catch((error) => {
         console.log(error.message);

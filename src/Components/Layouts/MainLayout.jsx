@@ -6,13 +6,14 @@ import Footer from "../Footer/Footer";
 const MainLayout = () => {
   return (
     <div>
-      <div className="py-3">
+      <div className="">
         <Navbar></Navbar>
       </div>
+      {/* <Bannar></Bannar> */}
       <div className="w-11/12 mx-auto">
         <Outlet></Outlet>
-        <Footer></Footer>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
