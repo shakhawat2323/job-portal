@@ -8,7 +8,8 @@ const Hotjobs = () => {
     fetch("http://localhost:5000/jobs")
       .then((res) => res.json())
       .then((data) => {
-        setJobsdata(data);
+        const reversdata = data.reverse().slice(0, 8);
+        setJobsdata(reversdata);
       });
   }, []);
   return (

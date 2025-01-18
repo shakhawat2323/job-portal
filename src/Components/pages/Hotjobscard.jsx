@@ -26,7 +26,11 @@ const Hotjobscard = ({ job }) => {
     <div className="card bg-base-100  p-3 shadow-xl">
       <div className="flex items-center gap-4 ">
         <figure>
-          <img src={company_logo} alt="Shoes" />
+          <img
+            className="w-24 h-20 rounded-xl"
+            src={company_logo}
+            alt="Shoes"
+          />
         </figure>
         <div>
           <h1 className="text-2xl font-bold">{company}</h1>
@@ -43,7 +47,7 @@ const Hotjobscard = ({ job }) => {
         </h2>
         <p>{description} </p>
         <div className=" flex gap-2  flex-wrap">
-          {requirements.map((skils, index) => (
+          {requirements?.map((skils, index) => (
             <p
               key={index}
               className="border  rounded-md text-center px-2 hover:text-purple-300 hover:bg-gray-600"

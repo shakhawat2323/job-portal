@@ -12,21 +12,22 @@ const Navbar = () => {
   };
   const navlink = (
     <>
-      <ul className="flex flex-col lg:flex-row  gap-2 lg:gap-5">
+      <ul className="flex lg:ml-20  flex-col lg:flex-row text-xl font-bold  gap-2 lg:gap-5">
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/alljobes">All Jobs</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/addjobs">Add Jobs</NavLink>
         </li>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/myaddjobs">My Add Jobe</NavLink>
         </li>
         <li>
           <NavLink to="/myapplication">My Application</NavLink>
-        </li>
-        <li>
-          <NavLink to="/">Home</NavLink>
         </li>
       </ul>
     </>
@@ -61,8 +62,8 @@ const Navbar = () => {
         </div>
         {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
         <Link to="/" className="flex items-center ">
-          <img className="w-32 h-20" src={logo} alt="" />
-          <p className="text-3xl font-bold">Work Nest </p>
+          <img className="w-32  h-20" src={logo} alt="" />
+          <p className="text-3xl w-[240px] font-bold">Work Nest </p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

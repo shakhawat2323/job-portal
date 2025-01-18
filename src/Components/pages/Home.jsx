@@ -39,11 +39,11 @@ const Home = () => {
         <h1 className="text-xl mt-2 mb-5 font-bold text-center">
           Find the job that’s perfect for you. about 800+ new jobs everyday
         </h1>
-        <div className="slider-container mb-5">
+        <div className="slider-container  mb-5">
           <Slider {...settings}>
             <Fade>
               <div className="flex flex-col  ">
-                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp1} alt="" />
                   </div>
@@ -52,7 +52,7 @@ const Home = () => {
                     <p className="text-xl  font-semibold">Jobs Available</p>
                   </div>
                 </Link>
-                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp2} alt="" />
                   </div>
@@ -65,7 +65,7 @@ const Home = () => {
             </Fade>
             <Fade>
               <div className="flex flex-col ">
-                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp3} alt="" />
                   </div>
@@ -74,7 +74,7 @@ const Home = () => {
                     <p className="text-xl  font-semibold">Jobs Available</p>
                   </div>
                 </Link>
-                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp4} alt="" />
                   </div>
@@ -87,7 +87,7 @@ const Home = () => {
             </Fade>
             <Fade>
               <div className="flex flex-col ">
-                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp5} alt="" />
                   </div>
@@ -96,7 +96,7 @@ const Home = () => {
                     <p className="text-xl  font-semibold">Jobs Available</p>
                   </div>
                 </Link>
-                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp6} alt="" />
                   </div>
@@ -109,7 +109,7 @@ const Home = () => {
             </Fade>
             <Fade>
               <div className="flex flex-col ">
-                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp7} alt="" />
                   </div>
@@ -118,7 +118,7 @@ const Home = () => {
                     <p className="text-xl  font-semibold">Jobs Available</p>
                   </div>
                 </Link>
-                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp8} alt="" />
                   </div>
@@ -131,7 +131,7 @@ const Home = () => {
             </Fade>
             <Fade>
               <div className="flex flex-col ">
-                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp9} alt="" />
                   </div>
@@ -140,7 +140,7 @@ const Home = () => {
                     <p className="text-xl  font-semibold">Jobs Available</p>
                   </div>
                 </Link>
-                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-72 h-20 shadow-2xl bg-slate-200 rounded-xl ">
+                <Link className="flex border-4 mt-2 hover:border-purple-400  items-center gap-5 w-60 h-20 shadow-2xl bg-slate-200 rounded-xl ">
                   <div>
                     <img src={temp10} alt="" />
                   </div>

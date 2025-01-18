@@ -8,6 +8,9 @@ import JobDetels from "../pages/JobDetels";
 import PrivetRouter from "../Authcontext/PrivetRouter";
 import Jobapply from "../pages/Jobapply";
 import Myapplication from "../pages/Myapplication";
+import Addjobs from "../pages/Addjobs";
+import Myaddjobs from "../pages/Myaddjobs";
+import Alljobes from "../pages/Alljobes";
 
 const router = createBrowserRouter([
   {
@@ -38,10 +41,34 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/myaddjobs",
+        element: (
+          <PrivetRouter>
+            <Myaddjobs></Myaddjobs>
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/alljobes",
+        element: (
+          <PrivetRouter>
+            <Alljobes></Alljobes>
+          </PrivetRouter>
+        ),
+      },
+      {
         path: "/myapplication",
         element: (
           <PrivetRouter>
             <Myapplication></Myapplication>
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/addjobs",
+        element: (
+          <PrivetRouter>
+            <Addjobs></Addjobs>
           </PrivetRouter>
         ),
       },
