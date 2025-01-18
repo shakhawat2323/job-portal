@@ -57,7 +57,7 @@ const JobDetels = () => {
         </h2>
         <p>{description} </p>
         <div className=" flex gap-2  flex-wrap">
-          {requirements.map((skils, index) => (
+          {requirements?.map((skils, index) => (
             <p
               key={index}
               className="border  rounded-md text-center px-2 hover:text-purple-300 hover:bg-gray-600"
