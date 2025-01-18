@@ -8,6 +8,7 @@ import { FcGoogle } from "react-icons/fc";
 import { ImGithub } from "react-icons/im";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { Registeruser, UserLogOUt, Googlepupop } = useContext(AuthContxt);
@@ -24,6 +25,11 @@ const Register = () => {
     const user = { name, photourl, email, password, cpassword, chakbox };
     Registeruser(email, password)
       .then((result) => {
+        Swal.fire({
+          title: "Register SuccessFully",
+          text: "You clicked the button!",
+          icon: "success",
+        });
         console.log(result.user);
         UserLogOUt();
         navigeate("/signin");
@@ -36,6 +42,11 @@ const Register = () => {
   const googlepupop = () => {
     Googlepupop()
       .then((result) => {
+        Swal.fire({
+          title: "Google Register SuccessFully",
+          text: "You clicked the button!",
+          icon: "success",
+        });
         console.log(result);
         navigeate("/");
       })

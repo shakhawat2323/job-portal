@@ -4,6 +4,7 @@ import Loginanimeted from "../../assets/loti/login.json";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContxt from "./Authcontext";
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
 
 const Signin = () => {
   const { Signinusers, Googlepupop } = useContext(AuthContxt);
@@ -22,7 +23,11 @@ const Signin = () => {
 
     Signinusers(email, password)
       .then((result) => {
-        console.log(result.user);
+        Swal.fire({
+          title: "Login SuccessFully",
+          text: "You clicked the button!",
+          icon: "success",
+        });
         navigate(form);
       })
       .catch((error) => console.log(error.message));
@@ -31,6 +36,11 @@ const Signin = () => {
   const googlepupop = () => {
     Googlepupop()
       .then((result) => {
+        Swal.fire({
+          title: "Login SuccessFully",
+          text: "You clicked the button!",
+          icon: "success",
+        });
         console.log(result);
         navigate(form);
       })

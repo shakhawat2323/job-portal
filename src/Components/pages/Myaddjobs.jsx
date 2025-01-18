@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ConAuth from "../Hooks/ConAuth";
 import { MdDelete } from "react-icons/md";
+import { FcViewDetails } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 const Myaddjobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -28,6 +30,7 @@ const Myaddjobs = () => {
                 <th>Deadline</th>
                 <th>Application Count</th>
                 <th>Delete</th>
+                <th>Update</th>
               </tr>
             </thead>
             <tbody>
@@ -37,8 +40,15 @@ const Myaddjobs = () => {
                   <td>{job.title}</td>
                   <td>{job.applicationDeadline}</td>
                   <td>{job.applicationCount}</td>
-                  <td className="text-red-600">
-                    <MdDelete />
+                  <td className="">
+                    <button>
+                      <MdDelete className="text-red-600 text-2xl font-bold" />
+                    </button>
+                  </td>
+                  <td className="">
+                    <Link to={`/viewapplication/${job._id}`}>
+                      <FcViewDetails className=" text-2xl font-bold" />
+                    </Link>
                   </td>
                 </tr>
               ))}
