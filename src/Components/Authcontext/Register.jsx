@@ -9,6 +9,7 @@ import { ImGithub } from "react-icons/im";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Register = () => {
   const { Registeruser, UserLogOUt, Googlepupop } = useContext(AuthContxt);

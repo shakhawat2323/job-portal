@@ -19,16 +19,22 @@ const Navbar = () => {
         <li>
           <NavLink to="/alljobes">All Jobs</NavLink>
         </li>
-
-        <li>
-          <NavLink to="/addjobs">Add Jobs</NavLink>
-        </li>
-        <li>
-          <NavLink to="/myaddjobs">My Add Jobe</NavLink>
-        </li>
-        <li>
-          <NavLink to="/myapplication">My Application</NavLink>
-        </li>
+        {user?.email ? (
+          <ul className="lg:flex lg:flex-row items-center ">
+            {" "}
+            <li>
+              <NavLink to="/addjobs">Add Jobs</NavLink>
+            </li>
+            <li>
+              <NavLink to="/myaddjobs">My Add Jobe</NavLink>
+            </li>
+            <li>
+              <NavLink to="/myapplication">My Application</NavLink>
+            </li>
+          </ul>
+        ) : (
+          ""
+        )}
       </ul>
     </>
   );
@@ -98,13 +104,15 @@ const Navbar = () => {
                   <span className="badge">New</span>
                 </a>
               </li>
+              <li></li>
               <li>
-                <Link to="/signin" className="">
-                  Sign In
-                </Link>
-              </li>
-              <li>
-                <button onClick={signoutuser}>Logout</button>
+                {user?.email ? (
+                  <button onClick={signoutuser}>Logout</button>
+                ) : (
+                  <Link to="/signin" className="">
+                    Sign In
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContxt from "./Authcontext";
 import { FcGoogle } from "react-icons/fc";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Signin = () => {
   const { Signinusers, Googlepupop } = useContext(AuthContxt);
@@ -23,12 +24,20 @@ const Signin = () => {
 
     Signinusers(email, password)
       .then((result) => {
+        console.log(result.user.email);
+        const user = { email: email };
+        console.log(user);
+        axios
+          .post("http://localhost:5000/jwt", user, { withCredentials: true })
+          .then((res) => {
+            console.log(res.data);
+          });
         Swal.fire({
           title: "Login SuccessFully",
           text: "You clicked the button!",
           icon: "success",
         });
-        navigate(form);
+        // navigate(form);
       })
       .catch((error) => console.log(error.message));
   };

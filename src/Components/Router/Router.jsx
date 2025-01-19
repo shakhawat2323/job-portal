@@ -61,11 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/alljobes",
-        element: (
-          <PrivetRouter>
-            <Alljobes></Alljobes>
-          </PrivetRouter>
-        ),
+        element: <Alljobes></Alljobes>,
       },
       {
         path: "/myapplication",
