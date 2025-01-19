@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import ConAuth from "../Hooks/ConAuth";
 import Jobcard from "./Jobcard";
 import axios from "axios";
+import UseAxios from "../Hooks/UseAxios";
 
 const Myapplication = () => {
+  const axiosInstance = UseAxios();
   const { user } = ConAuth();
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
@@ -13,10 +15,14 @@ const Myapplication = () => {
     //     console.log(data);
     //     setJobs(data);
     //   });
-    axios
-      .get(`http://localhost:5000/jobs-application?email=${user.email}`, {
-        withCredentials: true,
-      })
+    // axios
+    //   .get(`http://localhost:5000/jobs-application?email=${user.email}`, {
+    //     withCredentials: true,
+    //   })
+    //   .then((res) => setJobs(res.data));
+
+    axiosInstance
+      .get(`/jobs-application?email=${user.email}`)
       .then((res) => setJobs(res.data));
   }, [user.email]);
 
@@ -24,7 +30,7 @@ const Myapplication = () => {
   return (
     <div>
       <h1>my application {jobs.length}</h1>
-      <h1>my application</h1>
+
       <div>
         <div className="overflow-x-auto">
           <table className="table">
